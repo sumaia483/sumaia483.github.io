@@ -709,14 +709,124 @@
     .contact-grid { grid-template-columns: 1fr; }
     .hero-stats { gap: 1.25rem; }
   }
+
+  /* ─── SAMSUNG S21 & SIMILAR MOBILE (360–420px) ─── */
+  @media (max-width: 430px) {
+    nav { padding: 0.875rem 1.25rem; }
+
+    .hero {
+      flex-direction: column-reverse;
+      padding: 5.5rem 1.25rem 2.5rem;
+      gap: 1.5rem;
+      min-height: auto;
+    }
+
+    .hero-badge {
+      font-size: 10px;
+      padding: 5px 12px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-name {
+      font-size: 3rem;
+      letter-spacing: -1.5px;
+    }
+
+    .hero-tagline {
+      font-size: 14px;
+      margin: 1rem 0 1.5rem;
+      max-width: 100%;
+    }
+
+    .hero-stats {
+      gap: 0.875rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: nowrap;
+    }
+
+    .hero-stat .num {
+      font-size: 1.75rem;
+    }
+
+    .hero-stat .lbl {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 0.875rem 1.25rem;
+      font-size: 13px;
+    }
+
+    .hero-right { width: 100%; }
+
+    .photo-frame {
+      width: 100%;
+      height: 260px;
+    }
+
+    .photo-badge {
+      bottom: -10px;
+      right: -4px;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .photo-badge strong { font-size: 16px; }
+
+    section { padding: 3rem 1.25rem; }
+
+    .section-title { font-size: 1.6rem; letter-spacing: -0.5px; }
+
+    .about-grid { gap: 1rem; }
+    .about-card { padding: 1.25rem; }
+
+    .target-role ul { flex-direction: column; }
+    .target-role li { font-size: 12px; }
+
+    .skills-grid { gap: 6px; }
+    .skill-pill { font-size: 11px; padding: 3px 10px; }
+
+    .pub-filters { gap: 6px; }
+    .pub-filter { font-size: 11px; padding: 5px 12px; }
+
+    .pub-item { padding: 1rem 1rem; gap: 0.75rem; }
+    .pub-num { font-size: 1.1rem; min-width: 28px; }
+    .pub-title { font-size: 13px; }
+
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .gallery-item { aspect-ratio: 4/3; }
+    .gallery-caption { transform: translateY(0); background: linear-gradient(transparent, #060d1fee); }
+
+    .timeline { padding-left: 1.5rem; }
+    .timeline-item { padding-left: 1rem; }
+    .timeline-item::before { left: -1.5rem; }
+    .timeline-role { font-size: 1rem; }
+
+    #experience > div { grid-template-columns: 1fr !important; gap: 2rem; }
+
+    .contact-card { padding: 1.25rem; }
+    .contact-link { padding: 0.75rem 1rem; }
+    .contact-icon { width: 32px; height: 32px; font-size: 12px; }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-    <a href="https://fazlulaman.org" class="nav-logo" style="text-decoration:none;">FA<span>.</span></a>  
-    <ul class="nav-links">
+  <a href="https://fazlulaman.org" class="nav-logo" style="text-decoration:none;">FA<span>.</span></a>
+  <ul class="nav-links">
     <li><a href="#about">about</a></li>
     <li><a href="#publications">research</a></li>
     <li><a href="#gallery">fieldwork</a></li>
@@ -1184,11 +1294,11 @@
         I'm open to R&D roles, research collaborations, and academic positions in electrical engineering, power systems, and grounding/lightning protection. Feel free to reach out!
       </p>
       <div class="contact-links">
-        <a href="mailto:fahaddrmc2@gmail.com" class="contact-link">
+        <a href="/cdn-cgi/l/email-protection#f0969198919494829d93c2b0979d91999cde939f9d" class="contact-link">
           <div class="contact-icon">✉</div>
           <div>
             <div class="contact-lbl">Email</div>
-            <div class="contact-val">fahaddrmc2@gmail.com</div>
+            <div class="contact-val"><span class="__cf_email__" data-cfemail="e583848d848181978886d7a58288848c89cb868a88">[email&#160;protected]</span></div>
           </div>
         </a>
         <a href="tel:+60104305328" class="contact-link">
@@ -1234,7 +1344,7 @@
   <p style="margin-top:0.5rem;color:#ffffff33;">Electrical Engineer · Masters Researcher · Grounding Systems Specialist</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function filterPubs(type, btn) {
   document.querySelectorAll('.pub-filter').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -1257,13 +1367,4 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.pub-item, .about-card, .gallery-item, .timeline-item, .contact-card').forEach((el, i) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = `opacity 0.5s ${i * 0.04}s ease, transform 0.5s ${i * 0.04}s ease`;
-  observer.observe(el);
-});
-</script>
-
-</body>
-</html>
+document.querySelectorAll('.pub-item, .about-card, .gallery-item, .timeline-item, .contact
